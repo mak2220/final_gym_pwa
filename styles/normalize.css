@@ -1,0 +1,28 @@
+/* Normalizador básico */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Eliminación de márgenes por defecto */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Tamaño de fuente y altura de línea base */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Eliminación de decoraciones de enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Restaura el estilo de lista */
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
