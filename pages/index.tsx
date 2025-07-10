@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import client from "@/lib/mongodb";
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import AlertModal from "@/components/AlertModal";
+import InstallPWA from "@/components/InstallPWA";
 
 type ConnectionStatus = {
   isConnected: boolean;
@@ -71,6 +72,7 @@ export default function Home({ isConnected }: InferGetServerSidePropsType<typeof
           Tenemos problemas de conexión. En breve los solucionaremos.
         </h2>
       )}
+      <InstallPWA />
     </main>
   );
 }

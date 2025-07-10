@@ -17,17 +17,25 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        edu: ['"Edu AU VIC WA NT Pre"', 'sans-serif'], // Usar el nombre exacto de la fuente entre comillas dobles
+        edu: ['"Edu AU VIC WA NT Pre"', 'sans-serif'],
       },
       fontSize: {
         'size-4.5':'4.5rem',
-        'size-2.5': '2.5rem', // Tamaño personalizado
-        'size-1.5': '1.5rem', // Tamaño personalizado
+        'size-2.5': '2.5rem',
+        'size-1.5': '1.5rem',
         'size-1':'1rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
     },
   },
   plugins: [],
 };
 export default config;
-
