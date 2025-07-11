@@ -6,7 +6,6 @@ import { Inter } from "next/font/google";
 import client from "@/lib/mongodb";
 import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import AlertModal from "@/components/AlertModal";
-import InstallPWA from "@/components/InstallPWA";
 
 type ConnectionStatus = {
   isConnected: boolean;
@@ -44,7 +43,7 @@ export default function Home({ isConnected }: InferGetServerSidePropsType<typeof
       {showModal && (
         <AlertModal
           title="¡Bienvenido a Gym App!"
-          message="Esta es una app demo pensada para gimnasios. Usala para mostrar rutinas, registrar progreso y más. Todo la expuesto aqui es a modo de ejemplo. Explora la barra superior o ingresa en el boton de abajo para ver como aplicar esta app en tu gimnasio. En 'Administradores' podras editar todo lo necesario para tus rutinas"
+          message="Esta es una app demo pensada para gimnasios. Usala para mostrar rutinas, registrar progreso y más. Todo la expuesto aqui es a modo de ejemplo. Explora la barra superior o ingresa en el boton de abajo para ver como aplicar esta app en tu gimnasio. En 'Administradores' podras editar todo lo necesario para tus rutinas. Si lo deseas puedes instalar la app en tu dispositivo desde nuestro Menú para usarla sin conexión."
           onClose={handleCloseModal}
         />
       )}
@@ -72,7 +71,7 @@ export default function Home({ isConnected }: InferGetServerSidePropsType<typeof
           Tenemos problemas de conexión. En breve los solucionaremos.
         </h2>
       )}
-      <InstallPWA />
+      
     </main>
   );
 }
